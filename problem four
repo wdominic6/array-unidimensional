@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    float med, me = 0, me2 = 0;
+    float num[5]={10,7,8,10,6};
+    for(int i = 0; i < 5; i++){
+        me = me + num[i];
+    }
+    cout << "la media es: " << me/5 << endl;
+    for(int i = 0 ; i < 5 ; i++){
+        me2 = me2 + abs(num[i] - me/5);
+    } 
+    cout << "el valor total es: " << me2/5; 
+    return 0;
+}
