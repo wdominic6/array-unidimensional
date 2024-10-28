@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    float med, me = 0, me2 = 0;
+    float num[6]={3,5,6,4,2,7};
+    for(int i = 0; i < 6; i++){
+        me = me + num[i];
+    }
+    cout << "la media aritmetica es: " << me/6 << endl;
+    for(int i = 0 ; i < 6 ; i++){
+        me2 = me2 + pow(abs(num[i] - me/6),2);
+    } 
+    cout << "el valor total es: " << me2/6; 
+    med=sqrt(me2/6);
+    cout << " y la raiz es " << med;
+    return 0;
+}
