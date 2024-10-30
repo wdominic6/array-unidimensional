@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double sxy,sx,sy,sx2,sy2,dx,dy,dxy,tx,ty,txy,r;
+    float x[5]={2,3,5,7,8};
+    float y[5]={14,20,32,42,44};
+    for(int i = 0 ; i < 5 ; i++){
+        sx += x[i]; //suma de x
+        sy += y[i]; //suma de y
+        sx2 += (pow(x[i],2)); //suma de x cuadrado
+        sy2 += (pow(y[i],2)); //suma de y cuadrado
+        sxy += (x[i]*y[i]); //suma de x por y 
+    }
+    dx = sx / 5; //media de x
+    dy = sy / 5; //media de y
+    tx=sqrt((sx2/5)-(dx*dx)); //desviacion de x
+    ty=sqrt((sy2/5)-(dy*dy)); //desviacion de y
+    txy=(sxy/5)-(dx*dy); //desviacion de x por y
+    r=txy/(tx*ty); //coeficiente
+    cout << txy <<"/("<< tx <<"*"<< ty <<")"<<  endl;
+    cout <<"="<< r;
+}
