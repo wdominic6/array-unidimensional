@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int matriz[5][5];
+    int n = 1,s1 = 0,s2 = 0,sf = 0;
+    for(int i = 0 ; i < 5 ; i++){
+        for(int j = 0 ; j < 5 ; j++){
+            matriz[i][j] = n;
+            n++;
+            if(i==2){
+                s1 += n;
+            }
+            if(j==2){
+                s2 += n;
+            }
+        }
+    }
+    sf = sf + s1 + s2;
+    for(int i = 0 ; i < 5 ; i++){
+        for(int j = 0 ; j < 5 ; j++){
+            if(i==2 && j==2){
+                matriz[i][j] = sf;
+            }
+            cout << matriz[i][j] << "\t";
+        }
+        cout << endl;
+    }
+}
